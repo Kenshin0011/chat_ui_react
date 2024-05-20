@@ -1,6 +1,6 @@
 import './assets/styles/App.css';
 import React, { useState, useCallback, useEffect } from 'react';
-import {Chats, UserStatements} from "./components/index";
+import {Chats, UserStatements} from "./components";
 import sampleData from "./assets/data/sample.js";
 
 function App() {
@@ -82,13 +82,13 @@ function App() {
     });
 
     return (
-    <section className="app-container">
-        <div className="chat-box-container">
-            <Chats chats={chats}/>
-            <UserStatements buttonVisible={buttonVisible} handleUserSendMessage={handleUserSendMessage} userStatement={userStatement} />
-        </div>
-        <button onClick={handleReset}>リセット</button>
-    </section>
+        <section className="app-container">
+            <div className="chat-box-container">
+                <Chats chats={chats}/>
+                <UserStatements buttonVisible={buttonVisible} handleUserSendMessage={handleUserSendMessage} userStatement={userStatement} />
+            </div>
+            <button onClick={handleReset}>リセット</button>
+        </section>
     );
 }
 
